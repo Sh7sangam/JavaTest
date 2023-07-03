@@ -1,0 +1,103 @@
+Question 1: -
+import java.util.Scanner;
+
+public class CheckingNumber {
+
+	public static void series(int i) {
+		if(i<0)
+			System.out.println("This is negative number");
+		else if(i==0)
+			System.out.println("This is Zero");
+		else
+			System.out.println("This is positive number");
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number you want to print");
+		int num = sc.nextInt();
+		series(num);
+
+	}
+
+}
+Question 2: - 
+import java.util.Scanner;
+
+public class FebonacciS {
+
+	public static void series(int i) {
+		int j = 0, k = 1 , l,m;
+		System.out.print(j + " " + k);
+
+		for (l = 2; l <= i; ++l) {
+			m = j + k;
+			System.out.print(" "+ m);
+			j = k;
+			k = m;
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number you want to print");
+		int num = sc.nextInt();
+		series(num);
+
+	}
+
+}
+
+Question 3 : -
+import java.util.Scanner;
+
+public class FindAvg {
+
+	public static void main(String[] args) {
+		int i = 0;
+		float sum = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array: ");
+		int n = sc.nextInt();
+		float[] arr = new float[n];
+		System.out.println("Enter "+n+" Element for an array");
+		do {
+			arr[i] = sc.nextInt();
+			sum = sum + arr[i];
+			i++;
+		}while(i<n);
+		float avg = sum/n;
+		System.out.println("Avarage is : "+avg);
+		
+
+	}
+}
+
+Question 4 : -
+public class FebonacciS {
+
+	public static void main(String[] args) {
+		System.out.println("Enter 3 Numbers ");
+		Scanner sc = new Scanner(System.in);
+		int s1 = sc.nextInt();
+		int s2 = sc.nextInt();
+		int s3 = sc.nextInt();
+
+		if (s1 < s2) {
+			if (s2 < s3) {
+				System.out.println(s3 + " is largest number");
+			} else {
+				System.out.println(s2 + " is largest number");
+			}
+
+		} else if (s1 < s3) {
+			System.out.println(s3 + " is largest number");
+		} else
+			System.out.println(s1 + " is largest number");
+
+	}
+}
